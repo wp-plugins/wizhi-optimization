@@ -73,7 +73,7 @@ add_action( 'admin_init', 'wizhi_imagelink_setup', 10 );
 function wizhi_imagelink_setup() {
 	$image_set = get_option( 'image_default_link_type' );
 	if ( $image_set !== 'none' ) {
-		update_wizhiion( 'image_default_link_type', 'none' );
+		update_option( 'image_default_link_type', 'none' );
 	}
 }
 
