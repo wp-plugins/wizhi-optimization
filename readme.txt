@@ -8,7 +8,7 @@ Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Clean up and optimization WordPress for Chinese user or who use English in China, 对WordPress的清理和优化。
+Clean up and optimization WordPress for Chinese user or who use English in China, 清理不必要的功能和代码，对WordPress中文用户进行了一些优化。
 
 == Description ==
 
