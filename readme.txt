@@ -14,7 +14,7 @@ Clean unnecessary functions，do some optimization for chinese，清理不必要
 
 = For English users =
 
-Clean up
+**Clean up**
 ------------------------------
 
 * remove useless dashboard widget
@@ -24,8 +24,9 @@ Clean up
 * clean up menu classes
 * for safe reason, remove the frontend wp generator version
 
-Optimization
+**Optimization**
 ----------------------------------
+
 * hide update notice for non-admin users
 * reorder the tinymce buttons, add font size and font background button
 * set maximum to 5 of post revision
@@ -42,6 +43,8 @@ Contact：iwillhappy1314@gmail.com
 = 中文用户 =
 
 **清理**
+----------------------------------
+
 * 移除无用的仪表盘部件
 * 移除head里没用的内容
 * 移除无用的顶部工具条菜单
@@ -50,6 +53,8 @@ Contact：iwillhappy1314@gmail.com
 * 移除版本号
 
 **优化**
+----------------------------------
+
 * 对非管理用户隐藏更新提醒
 * 调整编辑器顺序、添加字号和背景颜色选择按钮
 * 设置一个最大的文章版本数量
