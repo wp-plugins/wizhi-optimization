@@ -14,7 +14,9 @@ Clean unnecessary functions，do some optimization for chinese，清理不必要
 
 = For English users =
 
-**Clean up**
+Clean up
+------------------------------
+
 * remove useless dashboard widget
 * clean up <head> content
 * remove useless topbar menu
@@ -22,7 +24,8 @@ Clean unnecessary functions，do some optimization for chinese，清理不必要
 * clean up menu classes
 * for safe reason, remove the frontend wp generator version
 
-**Optimization**
+Optimization
+----------------------------------
 * hide update notice for non-admin users
 * reorder the tinymce buttons, add font size and font background button
 * set maximum to 5 of post revision
