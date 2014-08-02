@@ -78,10 +78,20 @@ function wizhi_imagelink_setup() {
 }
 
 
-//limit maximum upload size to 2M
-add_filter( 'upload_size_limit', 'wizhi_max_up_size' );
-function wizhi_max_up_size() {
-	return 2048 * 1024; // 2014 kb
+//Random String Generator
+function wizhi_rand_str($length)
+{
+    $chars = array_merge(range('a','z'), range('0','9'));
+    $length = intval($length) > 0 ? intval($length) : 8;
+    $max = count($chars) - 1;
+    $str = "";
+
+    while($length--) {
+        shuffle($chars);
+        $rand = mt_rand(0, $max);
+        $str .= $chars[$rand];
+    }
+    return $str;
 }
 
 
@@ -97,7 +107,7 @@ function wizhi_upload_file( $filename ) {
 	}
 
 	if ( preg_match( '/[\x{4e00}-\x{9fa5}]+/u', $filename ) ) {
-		$filename = substr( md5( $filename ), 0, 8 );
+		$filename = wizhi_rand_str(12);
 	}
 	$filename .= '.' . $extension;
 

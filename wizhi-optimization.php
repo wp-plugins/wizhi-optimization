@@ -3,7 +3,7 @@
 Plugin Name:        Wizhi Optimization
 Plugin URI:         http://www.wpzhiku.com/
 Description:        针对WordPress中文用户的一些精简和优化
-Version:            1.0.1
+Version:            1.0.2
 Author:             Amos Lee
 Author URI:         http://www.wpzhiku.com/
 License:            MIT License
@@ -17,11 +17,3 @@ function wizhi_load_modules() {
     require_once(WIZHI_PATH . 'modules/optimization.php');
 }
 add_action('after_setup_theme', 'wizhi_load_modules');
-
-
-//quick post types and taxonomy add
-require_once(WIZHI_PATH . 'modules/post_types.php');
-
-//display pagination
-require_once(WIZHI_PATH . 'modules/pagination.php');
-

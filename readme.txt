@@ -4,18 +4,17 @@ Donate link:
 Tags: admin, post, pages, plugin
 Requires at least: 3.4
 Tested up to: 3.9.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Clean unnecessary functions，do some optimization for chinese，清理不必要的功能和代码，对WordPress中文用户进行了一些优化。
+Clean up and optimization WordPress for Chinese user or who use English in China
 
 == Description ==
 
 = For English users =
 
 **Clean up**
-------------------------------
 
 * remove useless dashboard widget
 * clean up <head> content
@@ -25,7 +24,6 @@ Clean unnecessary functions，do some optimization for chinese，清理不必要
 * for safe reason, remove the frontend wp generator version
 
 **Optimization**
-----------------------------------
 
 * hide update notice for non-admin users
 * reorder the tinymce buttons, add font size and font background button
@@ -37,13 +35,9 @@ Clean unnecessary functions，do some optimization for chinese，清理不必要
 * automatic add a featured image
 
 
-Contact：iwillhappy1314@gmail.com
-
-
 = 中文用户 =
 
 **清理**
-----------------------------------
 
 * 移除无用的仪表盘部件
 * 移除head里没用的内容
@@ -53,7 +47,6 @@ Contact：iwillhappy1314@gmail.com
 * 移除版本号
 
 **优化**
-----------------------------------
 
 * 对非管理用户隐藏更新提醒
 * 调整编辑器顺序、添加字号和背景颜色选择按钮
@@ -63,8 +56,6 @@ Contact：iwillhappy1314@gmail.com
 * 转化中文图片名称为md5
 * 自动添加标题为 Untitled
 * 自动设置特色图像
-
-联系方式：iwillhappy1314@gmail.com
 
 
 == Installation ==
@@ -82,7 +73,7 @@ Contact：iwillhappy1314@gmail.com
 
 == Screenshots ==
 
-Screenshots is here：[http://www.wpzhiku.com/wizhi-optimization/](http://www.wpzhiku.com/wizhi-optimization/)
+Screenshots is here：http://www.wpzhiku.com/wizhi-optimization/
 
 
 == Changelog ==
@@ -90,5 +81,7 @@ Screenshots is here：[http://www.wpzhiku.com/wizhi-optimization/](http://www.wp
 = 1.0 =
 * The first released
 
-= 1.0.1 =
-* Fix errors
+= 1.0.2 =
+* Remove unecessary files
+* Remove file upload limit
+* Change Chinese filename to random string

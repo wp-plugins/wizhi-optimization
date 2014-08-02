@@ -64,5 +64,11 @@ function wizhi_remove_version() {
 	return '';
 }
 
+//remove the blank arround wp_title output
+function wizhi_remove_wp_title_blank($title) {
+	return trim($title);
+}
+
+add_filter('wp_title', 'wizhi_remove_wp_title_blank');
 
 ?>
