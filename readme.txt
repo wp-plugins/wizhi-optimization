@@ -86,5 +86,5 @@ Screenshots is here：http://www.wpzhiku.com/wizhi-optimization/
 * Remove file upload limit
 * Change Chinese filename to random string
 
-= 1.0.2 =
+= 1.0.3 =
 * Add span filter function

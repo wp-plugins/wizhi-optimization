@@ -3,7 +3,7 @@
 Plugin Name:        Wizhi Optimization
 Plugin URI:         http://www.wpzhiku.com/
 Description:        针对WordPress中文用户的一些精简和优化
-Version:            1.0.2
+Version:            1.0.3
 Author:             Amos Lee
 Author URI:         http://www.wpzhiku.com/
 License:            MIT License
