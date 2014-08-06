@@ -195,4 +195,36 @@ $fttaxonomychangeorder = new wizhi_cat_check_order();
 
 }// top most if condition ends here
 
+
+
+// preprocess comment
+add_action('preprocess_comment','wizhi_preprocess_comment');
+function wizhi_preprocess_comment($commentdata){
+ 
+	$comment_post_ID=$commentdata["comment_post_ID"];
+	$comment_content=$commentdata["comment_content"];
+	$comment_author=$commentdata["comment_author"];
+	$comment_author_email=$commentdata["comment_author_email"];
+	$comment_author_url=$commentdata["comment_author_url"];
+	$comment_author_IP=$commentdata["comment_author_IP"];
+	$comment_agent=$commentdata["comment_agent"];
+ 
+	//check wp nonce
+	$nonce=wp_create_nonce($comment_post_ID);
+	if(!isset($_POST["comment_nonce"]) || $_POST["comment_nonce"]!==$nonce){
+		wp_die("You are robot?");
+	}
+  
+	//check black list
+	if( wp_blacklist_check($comment_author,$comment_author_email,$comment_author_url, $comment_content, $comment_author_IP, $comment_agent )){
+		wp_die("Your comment has been banned");
+	}
+  
+	//fiter html tags
+	$comment_content=strip_tags($comment_content);
+ 
+	return $commentdata;
+ 
+}
+
 ?>

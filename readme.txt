@@ -4,7 +4,7 @@ Donate link:
 Tags: admin, post, pages, plugin
 Requires at least: 3.4
 Tested up to: 3.9.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -85,3 +85,6 @@ Screenshots is here：http://www.wpzhiku.com/wizhi-optimization/
 * Remove unecessary files
 * Remove file upload limit
 * Change Chinese filename to random string
+
+= 1.0.2 =
+* Add span filter function
