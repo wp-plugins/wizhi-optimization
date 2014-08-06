@@ -196,6 +196,14 @@ $fttaxonomychangeorder = new wizhi_cat_check_order();
 }// top most if condition ends here
 
 
+// Add comment nonce
+add_action("comment_form_top","wizhi_comment_nonce");
+function wizhi_comment_nonce(){
+	global $post;
+	$nonce=wp_create_nonce($post->ID);
+	echo '<input type="hidden" name="comment_nonce" value="'.$nonce.'" />';
+}
+
 
 // preprocess comment
 add_action('preprocess_comment','wizhi_preprocess_comment');
