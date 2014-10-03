@@ -3,8 +3,8 @@ Contributors: Amos Lee
 Donate link: 
 Tags: admin, post, pages, plugin
 Requires at least: 3.4
-Tested up to: 3.9.1
-Stable tag: 1.0.3
+Tested up to: 4.0
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,6 +22,7 @@ Clean up and optimization WordPress for Chinese user or who use English in China
 * remove dashboard google font，resolved the slow dashboard problem in China 
 * clean up menu classes
 * for safe reason, remove the frontend wp generator version
+* remove dashboard icons and editer buttons in 4.0 frontend
 
 **Optimization**
 
@@ -45,6 +46,7 @@ Clean up and optimization WordPress for Chinese user or who use English in China
 * 移除谷歌open sans字体，解决后台在中国打开慢的问题
 * 移除菜单的多余CSS选择器
 * 移除版本号
+* 移除4.0版本前台没用的dashicon个editer css
 
 **优化**
 
@@ -88,3 +90,9 @@ Screenshots is here：http://www.wpzhiku.com/wizhi-optimization/
 
 = 1.0.3 =
 * Add span filter function
+
+= 1.0.4 =
+* Add user browser version to body_class
+
+= 1.0.5 =
+* remove dashboard icons and editer buttons in 4.0 frontend

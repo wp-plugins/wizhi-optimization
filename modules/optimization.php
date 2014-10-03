@@ -96,7 +96,7 @@ function wizhi_rand_str($length)
 
 
 
-//transform chinese filename to first 8 character of filename`s md5 value
+//ganarate new file name
 add_filter( 'sanitize_file_name', 'wizhi_upload_file', 5, 1 );
 function wizhi_upload_file( $filename ) {
 	$parts     = explode( '.', $filename );
@@ -107,7 +107,7 @@ function wizhi_upload_file( $filename ) {
 	}
 
 	if ( preg_match( '/[\x{4e00}-\x{9fa5}]+/u', $filename ) ) {
-		$filename = wizhi_rand_str(12);
+		$filename = date('md') . wizhi_rand_str(8);
 	}
 	$filename .= '.' . $extension;
 
@@ -189,50 +189,48 @@ if ( ! class_exists( 'wizhi_cat_check_order' ) ){
         add_filter('wp_terms_checklist_args','changeTaxonomyCheckboxlistOrder',10,2);
     }
     
-} // class ends here
+}
 
 $fttaxonomychangeorder = new wizhi_cat_check_order();
 
-}// top most if condition ends here
-
-
-// Add comment nonce
-add_action("comment_form_top","wizhi_comment_nonce");
-function wizhi_comment_nonce(){
-	global $post;
-	$nonce=wp_create_nonce($post->ID);
-	echo '<input type="hidden" name="comment_nonce" value="'.$nonce.'" />';
 }
 
 
-// preprocess comment
-add_action('preprocess_comment','wizhi_preprocess_comment');
-function wizhi_preprocess_comment($commentdata){
- 
-	$comment_post_ID=$commentdata["comment_post_ID"];
-	$comment_content=$commentdata["comment_content"];
-	$comment_author=$commentdata["comment_author"];
-	$comment_author_email=$commentdata["comment_author_email"];
-	$comment_author_url=$commentdata["comment_author_url"];
-	$comment_author_IP=$commentdata["comment_author_IP"];
-	$comment_agent=$commentdata["comment_agent"];
- 
-	//check wp nonce
-	$nonce=wp_create_nonce($comment_post_ID);
-	if(!isset($_POST["comment_nonce"]) || $_POST["comment_nonce"]!==$nonce){
-		wp_die("You are robot?");
-	}
-  
-	//check black list
-	if( wp_blacklist_check($comment_author,$comment_author_email,$comment_author_url, $comment_content, $comment_author_IP, $comment_agent )){
-		wp_die("Your comment has been banned");
-	}
-  
-	//fiter html tags
-	$comment_content=strip_tags($comment_content);
- 
-	return $commentdata;
- 
+//Add current users browser information to body css class
+function wizhi_browser_body_class( $classes ) {
+    global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
+
+    if($is_lynx) $classes[] = 'lynx';
+    elseif($is_gecko) $classes[] = 'gecko';
+    elseif($is_opera) $classes[] = 'opera';
+    elseif($is_NS4) $classes[] = 'ns4';
+    elseif($is_safari) $classes[] = 'safari';
+    elseif($is_chrome) $classes[] = 'chrome';
+    elseif($is_IE) {
+        $browser = $_SERVER['HTTP_USER_AGENT'];
+        $browser = substr( "$browser", 25, 8);
+        if ($browser == "MSIE 7.0"  ) {
+            $classes[] = 'ie7';
+            $classes[] = 'ie';
+        } elseif ($browser == "MSIE 6.0" ) {
+            $classes[] = 'ie6';
+            $classes[] = 'ie';
+        } elseif ($browser == "MSIE 8.0" ) {
+            $classes[] = 'ie8';
+            $classes[] = 'ie';
+        } elseif ($browser == "MSIE 9.0" ) {
+            $classes[] = 'ie9';
+            $classes[] = 'ie';
+        } else {
+            $classes[] = 'ie';
+        }
+    }
+    else $classes[] = 'unknown';
+
+    if( $is_iphone ) $classes[] = 'iphone';
+
+    return $classes;
 }
+add_filter( 'body_class', 'wizhi_browser_body_class' );
 
 ?>

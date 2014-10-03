@@ -50,6 +50,18 @@ function wizhi_remove_open_sans_from_wp_core() {
 }
 
 
+//remove dashboard icons and editer buttons in frontend
+add_action( 'init', 'opt_remove_open_sans_from_wp_core' );
+function opt_remove_open_sans_from_wp_core() {
+	if (!is_user_logged_in()) {
+		wp_deregister_style( 'dashicons' );
+	    wp_register_style( 'dashicons', false );
+	    wp_enqueue_style('dashicons','');
+	    wp_deregister_style( 'editor-buttons' );
+	    wp_register_style( 'editor-buttons', false );
+	    wp_enqueue_style('editor-buttons','');
+	}
+}
 
 //clean up menu classes
 add_filter( 'nav_menu_css_class', 'wizhi_css_attributes_filter', 100, 1 );
