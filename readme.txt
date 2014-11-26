@@ -4,7 +4,7 @@ Donate link:
 Tags: admin, post, pages, plugin
 Requires at least: 3.4
 Tested up to: 4.0
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,6 +34,7 @@ Clean up and optimization WordPress for Chinese user or who use English in China
 * transform chinese filename to the first 8 character of filename`s md5 value
 * automatic add post title 'Untitled'
 * automatic add a featured image
+* chang avatar resourse to duoshuo
 
 
 = 中文用户 =
@@ -58,6 +59,7 @@ Clean up and optimization WordPress for Chinese user or who use English in China
 * 转化中文图片名称为md5
 * 自动添加标题为 Untitled
 * 自动设置特色图像
+* 修改avatar的服务器为国内的多说
 
 
 == Installation ==
@@ -96,3 +98,6 @@ Screenshots is here：http://www.wpzhiku.com/wizhi-optimization/
 
 = 1.0.5 =
 * remove dashboard icons and editer buttons in 4.0 frontend
+
+= 1.0.6 =
+* chang avatar resourse to duoshuo

@@ -8,6 +8,13 @@ if (!current_user_can('update_plugins')) {
 	add_filter( 'pre_wizhiion_update_core', create_function( '$a', "return null;" ) );
 }
 
+//chang avatar server to duoshuo
+function mytheme_get_avatar($avatar) {
+    $avatar = str_replace(array("www.gravatar.com","0.gravatar.com","1.gravatar.com","2.gravatar.com"),"gravatar.duoshuo.com",$avatar);
+    return $avatar;
+}
+add_filter( 'get_avatar', 'mytheme_get_avatar', 10, 3 );
+
 
 //reorder the tinymce buttons, add font size and font background button
 function wizhi_mce_buttons_1( $buttons ) {
