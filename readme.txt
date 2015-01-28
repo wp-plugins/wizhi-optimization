@@ -2,9 +2,9 @@
 Contributors: Amos Lee
 Donate link: 
 Tags: admin, post, pages, plugin
-Requires at least: 3.4
-Tested up to: 4.0
-Stable tag: 1.0.6
+Requires at least: 3.9
+Tested up to: 4.1
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,9 @@ Clean up and optimization WordPress for Chinese user or who use English in China
 * automatic add post title 'Untitled'
 * automatic add a featured image
 * chang avatar resourse to duoshuo
+* Add object cache to nav menu
+
+AUthor Link：[WordPress智库](http://www.wpzhiku.com/wizhi-optimization/ "WordPress 优化和清理插件wizhi optimization")
 
 
 = 中文用户 =
@@ -60,6 +63,9 @@ Clean up and optimization WordPress for Chinese user or who use English in China
 * 自动添加标题为 Untitled
 * 自动设置特色图像
 * 修改avatar的服务器为国内的多说
+* 给导航菜单添加了对象缓存
+
+插件网址：[WordPress智库](http://www.wpzhiku.com/wizhi-optimization/ "WordPress 优化和清理插件wizhi optimization")
 
 
 == Installation ==
@@ -101,3 +107,6 @@ Screenshots is here：http://www.wpzhiku.com/wizhi-optimization/
 
 = 1.0.6 =
 * chang avatar resourse to duoshuo
+
+= 1.0.7 =
+* Add object cache to nav menu

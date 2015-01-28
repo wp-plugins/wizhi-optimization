@@ -9,11 +9,11 @@ if (!current_user_can('update_plugins')) {
 }
 
 //chang avatar server to duoshuo
-function mytheme_get_avatar($avatar) {
+function wizhi_get_avatar($avatar) {
     $avatar = str_replace(array("www.gravatar.com","0.gravatar.com","1.gravatar.com","2.gravatar.com"),"gravatar.duoshuo.com",$avatar);
     return $avatar;
 }
-add_filter( 'get_avatar', 'mytheme_get_avatar', 10, 3 );
+add_filter( 'get_avatar', 'wizhi_get_avatar', 10, 3 );
 
 
 //reorder the tinymce buttons, add font size and font background button
